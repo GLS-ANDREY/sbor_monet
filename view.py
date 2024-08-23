@@ -6,11 +6,7 @@ display = display.set_mode([1000, 1000])
 init()
 font = pygame.font.SysFont("arial", 27, True)
 
-
 randomniy_y = random.randint(10, 990)
-
-
-
 
 def risovanie():
     number_tochek = 0
