@@ -7,7 +7,7 @@ random_append = model.randomniy_y_spisok[-1]
 posledniy_el = model.randomniy_y_spisok[-1]
 d = 50
 e = 10
-#TODO: График вышел вверх на столько скольки равен последний элемент списка, Схема сдвига графика: все точки сдвинуть на столько на сколько вышел график
+#TODO: График вышел вверх на столько скольки равен последний элемент списка. Схема сдвига графика: все точки сдвинуть на столько на сколько вышел график
 def allsobitiya():
     global random_append
     s = pygame.event.get()
@@ -21,3 +21,5 @@ def allsobitiya():
             b = random_append - d
             c = random_append - e
             random_append = random.randint(b, c)
+        if posledniy_el < 0:
+            posledniy_el_plus = -posledniy_el
