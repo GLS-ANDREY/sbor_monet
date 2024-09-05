@@ -8,6 +8,7 @@ posledniy_el = model.randomniy_y_spisok[-1]
 d = 50
 e = 10
 #TODO: График вышел вверх на столько скольки равен последний элемент списка. Схема сдвига графика: все точки сдвинуть на столько на сколько вышел график
+#TODO: Посмотреть последний раздел в справочнике
 def allsobitiya():
     global random_append
     s = pygame.event.get()
