@@ -21,9 +21,7 @@ def model_in_controller():
     randomniy_y_spisok.append(random_append)
     random_ogranichenie1 = random_append - 50
     random_ogranichenie2 = random_append + 50
-    random_append_old = random_append
     random_append = random.randint(random_ogranichenie1, random_ogranichenie2)
-    print(random_append-random_append_old)
 
     posledniy_el = randomniy_y_spisok[-1]
     if posledniy_el < 0:
@@ -31,3 +29,5 @@ def model_in_controller():
         dlina_spiska = len(randomniy_y_spisok)
         for i in range(0, dlina_spiska):
             randomniy_y_spisok[i] += posledniy_el_plus
+    print(randomniy_y_spisok[-1],random_append)
+
