@@ -1,21 +1,27 @@
 import pygame, model, random
 from pygame import *
 
-display = display.set_mode([1000, 1000])
+display = display.set_mode([1500, 1000])
 
 init()
 font = pygame.font.SysFont("arial", 27, True)
+zona = pygame.image.load("zona.png")
+moneta = pygame.image.load("Moneta.png")
+moneta_transform = pygame.transform.scale(moneta, [20, 20])
+zona_transform = pygame.transform.scale(zona, [400, 1000])
 
 def risovanie():
     number_tochek = 0
     display.fill([0, 0, 0])
 
+    display.blit(zona_transform,[1100,0])
+    display.blit(moneta_transform, [random.randint(1100, 1450), random.randint(0, 1500)])
     while True:
-        xsp = 1000 / (model.kol_tochki - 1) * number_tochek
-        xep = 1000 / (model.kol_tochki - 1) * (number_tochek + 1)
+        x_start_pos = 1500 / (model.kol_tochki - 1) * number_tochek
+        x_end_pos = 1500 / (model.kol_tochki - 1) * (number_tochek + 1)
         if number_tochek < model.kol_tochki - 1:
-            draw.line(display, [34, 175, 41], [xsp, model.randomniy_y_spisok[number_tochek]],  # тут берется n элемент
-                      [xep, model.randomniy_y_spisok[number_tochek + 1]], 3)
+            draw.line(display, [34, 175, 41], [x_start_pos, model.randomniy_y_spisok[number_tochek]],  # тут берется n элемент
+                      [x_end_pos, model.randomniy_y_spisok[number_tochek + 1]], 4)
         number_tochek += 1
 
         if number_tochek == model.kol_tochki:

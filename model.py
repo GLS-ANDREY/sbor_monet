@@ -2,7 +2,7 @@ import random
 from pygame import *
 #TODO: Рулить вероятностью, не позволять улетать вниз
 randomniy_y_spisok = []
-kol_tochki = random.randint(75, 250)
+kol_tochki = random.randint(250, 250)
 s = range(kol_tochki)
 
 
