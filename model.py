@@ -1,10 +1,10 @@
 import random
 from pygame import *
-#TODO: Рулить вероятностью, не позволять улетать вниз
 randomniy_y_spisok = []
 kol_tochki = random.randint(250, 250)
 s = range(kol_tochki)
-
+x_monetki = 1200
+y_monetki = 750
 
 nachalo_grafika = random.randint(10, 700)
 for a in s:
@@ -15,6 +15,11 @@ for a in s:
     nachalo_grafika = random.randint(b, c)
 
 random_append = randomniy_y_spisok[-1]
+def timer_spawna_monetki():
+    global x_monetki, y_monetki
+    x_monetki = random.randint(1100, 1450)
+    y_monetki = random.randint(0, 1500)
+
 def model_in_controller():
     global random_append
     del randomniy_y_spisok[0]
