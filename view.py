@@ -3,11 +3,12 @@ from pygame import *
 
 display = display.set_mode([1500, 1000])
 
+
 init()
 font = pygame.font.SysFont("arial", 27, True)
 zona = pygame.image.load("zona.png")
 moneta = pygame.image.load("Moneta.png")
-moneta_transform = pygame.transform.scale(moneta, [300, 300])
+moneta_transform = pygame.transform.scale(moneta, [50, 50])
 zona_transform = pygame.transform.scale(zona, [400, 1000])
 
 
@@ -15,8 +16,12 @@ def risovanie():
     number_tochek = 0
     display.fill([0, 0, 0])
 
+    #Картинки
     display.blit(zona_transform,[1100,0])
-    display.blit(moneta_transform, [model.x_monetki, model.y_monetki])
+    display.blit(moneta_transform, model.rect_monetki)
+    #Ректы
+    draw.rect(display,[255,255,255],model.rect_monetki,4)
+
     while True:
         x_start_pos = 1500 / (model.kol_tochki - 1) * number_tochek
         x_end_pos = 1500 / (model.kol_tochki - 1) * (number_tochek + 1)
