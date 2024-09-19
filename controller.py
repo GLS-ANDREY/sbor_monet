@@ -14,14 +14,12 @@ def allsobitiya():
     global random_append
     s = pygame.event.get()
 
-    pos_mouse = pygame.mouse.get_pos()
-    tik_po_rect = model.rect_monetki.collidepoint(pos_mouse[0], pos_mouse[1])
 
     for a in s:
         if a.type == type_spawn_monetki:
             model.timer_spawna_monetki()
 
-        if a.type == pygame.MOUSEBUTTONDOWN and tik_po_rect:
+        if a.type == pygame.MOUSEBUTTONDOWN and model.rect_monetki.collidepoint(a.pos[0],a.pos[1]):
             print(1)
 
         if a.type == pygame.QUIT:
