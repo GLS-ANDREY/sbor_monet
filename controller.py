@@ -14,6 +14,7 @@ def allsobitiya():
     global random_append
     s = pygame.event.get()
 
+
     for a in s:
         if a.type == type_spawn_monetki:
             model.timer_spawna_monetki()
@@ -22,8 +23,13 @@ def allsobitiya():
             time.set_timer(type_spawn_monetki, 1500)
             model.timer_spawna_monetki()
 
+        if model.rect_ilona_maska.bottom >= 1000:
+            model.otskok_ilona_maska()
+
         if a.type == pygame.QUIT:
             exit()
 
         if a.type == timer_grafika:
             model.grafik()
+            model.speed_ilon_mask()
+

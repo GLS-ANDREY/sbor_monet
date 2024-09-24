@@ -3,6 +3,8 @@ from pygame import *
 
 display = display.set_mode([1500, 1000])
 
+rect = model.rect_ilona_maska
+
 init()
 font = pygame.font.SysFont("arial", 27, True)
 zona = pygame.image.load("zona.png")
@@ -20,10 +22,12 @@ def risovanie():
 
     # Картинки
     display.blit(zona_transform, [1100, 0])
-    display.blit(ilon_mask_transform, [500+model.speed_y, 500+model.speed_y])
-    model.speed_ilon_mask()
+    display.blit(ilon_mask_transform, rect)
+
     # Ректы
-    # draw.rect(display,[255,255,255],model.rect_monetki,4)
+    draw.rect(display,[255,255,255],model.rect_monetki,4)
+    draw.rect(display,[255,255,255],model.rect_ilona_maska,4)
+
     # Тексты
     monet_sobrano = font.render("Всего собрано " + str(model.bank) + " монет", True, [255, 255, 255])
     vsego_bilo_monet = font.render("Всего появилось " + str(model.mirovoy_bank) + " монет", True, [255, 255, 255])
