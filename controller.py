@@ -24,7 +24,11 @@ def allsobitiya():
             model.timer_spawna_monetki()
 
         if model.rect_ilona_maska.bottom >= 1000:
-            model.otskok_ilona_maska()
+            model.otbivka_niz()
+        if model.rect_ilona_maska.top <= 0:
+            model.otbivka_verx()
+        if model.rect_ilona_maska.x >= 1500:
+            model.vozvrat()
 
         if a.type == pygame.QUIT:
             exit()

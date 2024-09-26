@@ -25,7 +25,7 @@ def risovanie():
     display.blit(ilon_mask_transform, rect)
 
     # Ректы
-    draw.rect(display,[255,255,255],model.rect_monetki,4)
+    # draw.rect(display,[255,255,255],model.rect_monetki,4)
     draw.rect(display,[255,255,255],model.rect_ilona_maska,4)
 
     # Тексты

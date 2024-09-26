@@ -7,11 +7,11 @@ randomniy_y_spisok = []
 kol_tochki = random.randint(250, 250)
 s = range(kol_tochki)
 
-dvizhenie_x = 1
-dvizhenie_y = 1
+speed_x = 10
+speed_y = 10
 
 rect_monetki = Rect(1200, 750, 50, 50)
-rect_ilona_maska = Rect(500, 500, 450, 300)
+rect_ilona_maska = Rect(0, 0, 450, 300)
 
 nachalo_grafika = random.randint(10, 700)
 for a in s:
@@ -24,18 +24,21 @@ for a in s:
 random_append = randomniy_y_spisok[-1]
 
 
-def otskok_ilona_maska():
-    global dvizhenie_y
-    dvizhenie_y = -dvizhenie_y
+def otbivka_niz():
+    global speed_y
+    speed_y = -10
+
+def otbivka_verx():
+    global speed_y
+    speed_y = 10
+
+def vozvrat():
+    rect_ilona_maska.x = -700
 
 def speed_ilon_mask():
-    global dvizhenie_x, dvizhenie_y
-    rect_ilona_maska.x = 500
-    rect_ilona_maska.y = 500
-    rect_ilona_maska.x += dvizhenie_x
-    rect_ilona_maska.y += dvizhenie_y
-    dvizhenie_x += 3
-    dvizhenie_y += 3
+    global speed_x, speed_y
+    rect_ilona_maska.x += speed_x
+    rect_ilona_maska.y += speed_y
 
 
 def timer_spawna_monetki():
