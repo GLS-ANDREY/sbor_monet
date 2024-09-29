@@ -15,8 +15,9 @@ moneta_transform = pygame.transform.scale(moneta, [50, 50])
 zona_transform = pygame.transform.scale(zona, [400, 1000])
 ilon_mask_transform = pygame.transform.scale(ilon_mask, [450, 300])
 
-
+#TODO: спросить про хакеров, что то сделать с дефом который постоянно вызывается в маин пи
 def risovanie():
+    ris_fps = model.clock.get_fps()
     number_tochek = 0
     display.fill([0, 0, 0])
 
@@ -26,11 +27,14 @@ def risovanie():
 
     # Ректы
     # draw.rect(display,[255,255,255],model.rect_monetki,4)
-    draw.rect(display,[255,255,255],model.rect_ilona_maska,4)
+    # draw.rect(display,[255,255,255],model.rect_ilona_maska,4)
 
     # Тексты
+
     monet_sobrano = font.render("Всего собрано " + str(model.bank) + " монет", True, [255, 255, 255])
     vsego_bilo_monet = font.render("Всего появилось " + str(model.mirovoy_bank) + " монет", True, [255, 255, 255])
+    fps = font.render("FPS:" + str(int(ris_fps)), True, [1, 255, 0])
+
 
     while True:
         x_start_pos = 1500 / (model.kol_tochki - 1) * number_tochek
@@ -45,6 +49,7 @@ def risovanie():
         if number_tochek == model.kol_tochki:
             break
 
+    display.blit(fps,[0,60])
     display.blit(vsego_bilo_monet, [0, 30])
     display.blit(monet_sobrano, [0, 0])
     display.blit(moneta_transform, model.rect_monetki)
