@@ -4,7 +4,6 @@ def fps():
     clock.tick()
 
 def otbivka():
-    time.sleep(0.1)
     if rect_ilona_maska.bottom >= 1000:
         otbivka_niz()
     if rect_ilona_maska.top <= 0:
@@ -27,6 +26,7 @@ def speed_ilon_mask():
     global speed_x, speed_y
     rect_ilona_maska.x += speed_x
     rect_ilona_maska.y += speed_y
+    otbivka()
 
 
 def timer_spawna_monetki():
@@ -72,6 +72,7 @@ def grafik():
         dlina_spiska = len(randomniy_y_spisok)
         for i in range(0, dlina_spiska):
             randomniy_y_spisok[i] -= posledniy_el_minus - 1000
+
 
 clock = pygame.time.Clock()
 mirovoy_bank = 1

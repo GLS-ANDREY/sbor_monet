@@ -15,7 +15,7 @@ moneta_transform = pygame.transform.scale(moneta, [50, 50])
 zona_transform = pygame.transform.scale(zona, [400, 1000])
 ilon_mask_transform = pygame.transform.scale(ilon_mask, [450, 300])
 
-#TODO: спросить про хакеров, что то сделать с дефом который постоянно вызывается в маин пи
+
 def risovanie():
     ris_fps = model.clock.get_fps()
     number_tochek = 0
