@@ -81,6 +81,7 @@ randomniy_y_spisok = []
 kol_tochki = random.randint(250, 250)
 s = range(kol_tochki)
 
+ris_lvl = 1
 speed_x = 10
 speed_y = 10
 

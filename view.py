@@ -34,6 +34,7 @@ def risovanie():
     monet_sobrano = font.render("Всего собрано " + str(model.bank) + " монет", True, [255, 255, 255])
     vsego_bilo_monet = font.render("Всего появилось " + str(model.mirovoy_bank) + " монет", True, [255, 255, 255])
     fps = font.render("FPS:" + str(int(ris_fps)), True, [1, 255, 0])
+    lvl = font.render("Уровень: " + str(model.ris_lvl), True, [255, 255, 255])
 
 
     while True:
@@ -49,7 +50,8 @@ def risovanie():
         if number_tochek == model.kol_tochki:
             break
 
-    display.blit(fps,[0,60])
+    display.blit(lvl,[0,60])
+    display.blit(fps,[0,90])
     display.blit(vsego_bilo_monet, [0, 30])
     display.blit(monet_sobrano, [0, 0])
     display.blit(moneta_transform, model.rect_monetki)
