@@ -1,7 +1,7 @@
-import random,time,pygame
+import random,time,pygame,model_nevazhno
 
 def fps():
-    clock.tick()
+    model_nevazhno.clock.tick()
 
 def otbivka():
     if rect_ilona_maska.bottom >= 1000:
@@ -74,7 +74,8 @@ def grafik():
             randomniy_y_spisok[i] -= posledniy_el_minus - 1000
 
 
-clock = pygame.time.Clock()
+ekran = 1
+
 mirovoy_bank = 1
 bank = 0
 randomniy_y_spisok = []

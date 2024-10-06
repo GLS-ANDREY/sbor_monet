@@ -1,7 +1,7 @@
-import pygame, model, random
+import pygame, model, random, model_nevazhno,settings
 from pygame import *
 
-display = display.set_mode([1500, 1000])
+display = display.set_mode([settings.width_display, settings.height_display])
 
 rect = model.rect_ilona_maska
 
@@ -16,8 +16,8 @@ zona_transform = pygame.transform.scale(zona, [400, 1000])
 ilon_mask_transform = pygame.transform.scale(ilon_mask, [450, 300])
 
 
-def risovanie():
-    ris_fps = model.clock.get_fps()
+def risovanie_game():
+    ris_fps = model_nevazhno.clock.get_fps()
     number_tochek = 0
     display.fill([0, 0, 0])
 
