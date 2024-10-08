@@ -1,7 +1,9 @@
-import random,time,pygame,model_nevazhno
+import random, time, pygame, model_nevazhno
+
 
 def fps():
     model_nevazhno.clock.tick()
+
 
 def otbivka():
     if rect_ilona_maska.bottom >= 1000:
@@ -11,16 +13,20 @@ def otbivka():
     if rect_ilona_maska.x >= 1500:
         vozvrat()
 
+
 def otbivka_niz():
     global speed_y
     speed_y = -10
+
 
 def otbivka_verx():
     global speed_y
     speed_y = 10
 
+
 def vozvrat():
     rect_ilona_maska.x = -700
+
 
 def speed_ilon_mask():
     global speed_x, speed_y

@@ -12,7 +12,8 @@ type_ilona_maska = pygame.event.custom_type()
 pygame.time.set_timer(type_ilona_maska, 50)
 
 type_speed_ilona_maska = pygame.event.custom_type()
-pygame.time.set_timer(type_speed_ilona_maska,10000)
+pygame.time.set_timer(type_speed_ilona_maska, 10000)
+
 
 def allsobitiya():
     global random_append
@@ -21,7 +22,6 @@ def allsobitiya():
         if a.type == type_spawn_monetki:
             model.timer_spawna_monetki()
 
-        #TODO: сейчас тут проверяется - не соприкоснулся ли левый верхний угол с монеткой, а нужно проверять не соприкоснулись внутренности илона маска с монеткой
         if model.rect_monetki.colliderect(model.rect_ilona_maska):
             model.bank -= 1
             pygame.time.set_timer(type_spawn_monetki, 1500)
@@ -48,3 +48,5 @@ def allsobitiya():
         if a.type == type_ilona_maska:
             model.speed_ilon_mask()
 
+        if  a.type == pygame.KEYDOWN and a.key == pygame.K_ESCAPE:
+            model.ekran = 2

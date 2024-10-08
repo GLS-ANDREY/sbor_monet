@@ -1,11 +1,10 @@
-import pygame, model, random, model_nevazhno,settings
-from pygame import *
+import pygame, model, random, model_nevazhno, settings
 
-display = display.set_mode([settings.width_display, settings.height_display])
+display = pygame.display.set_mode([settings.width_display, settings.height_display])
 
 rect = model.rect_ilona_maska
 
-init()
+pygame.init()
 font = pygame.font.SysFont("arial", 27, True)
 zona = pygame.image.load("zona.png")
 moneta = pygame.image.load("Moneta.png")
@@ -26,8 +25,8 @@ def risovanie_game():
     display.blit(ilon_mask_transform, rect)
 
     # Ректы
-    # draw.rect(display,[255,255,255],model.rect_monetki,4)
-    # draw.rect(display,[255,255,255],model.rect_ilona_maska,4)
+    # pygame.draw.rect(display,[255,255,255],model.rect_monetki,4)
+    # pygame.draw.rect(display,[255,255,255],model.rect_ilona_maska,4)
 
     # Тексты
 
@@ -36,22 +35,21 @@ def risovanie_game():
     fps = font.render("FPS:" + str(int(ris_fps)), True, [1, 255, 0])
     lvl = font.render("Уровень: " + str(model.ris_lvl), True, [255, 255, 255])
 
-
     while True:
         x_start_pos = 1500 / (model.kol_tochki - 1) * number_tochek
         x_end_pos = 1500 / (model.kol_tochki - 1) * (number_tochek + 1)
 
         if number_tochek < model.kol_tochki - 1:
-            draw.line(display, [34, 175, 41], [x_start_pos, model.randomniy_y_spisok[number_tochek]],
-                      # тут берется n элемент
-                      [x_end_pos, model.randomniy_y_spisok[number_tochek + 1]], 4)
+            pygame.draw.line(display, [34, 175, 41], [x_start_pos, model.randomniy_y_spisok[number_tochek]],
+                             # тут берется n элемент
+                             [x_end_pos, model.randomniy_y_spisok[number_tochek + 1]], 4)
         number_tochek += 1
 
         if number_tochek == model.kol_tochki:
             break
 
-    display.blit(lvl,[0,60])
-    display.blit(fps,[0,90])
+    display.blit(lvl, [0, 60])
+    display.blit(fps, [0, 90])
     display.blit(vsego_bilo_monet, [0, 30])
     display.blit(monet_sobrano, [0, 0])
     display.blit(moneta_transform, model.rect_monetki)
