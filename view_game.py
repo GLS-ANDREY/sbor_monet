@@ -14,6 +14,10 @@ moneta_transform = pygame.transform.scale(moneta, [50, 50])
 zona_transform = pygame.transform.scale(zona, [400, 1000])
 ilon_mask_transform = pygame.transform.scale(ilon_mask, [450, 300])
 
+def risovanie_nadpisi(nadpis,y):
+    vsego_sobrano_monet = font.render(nadpis,True,[255,255,255])
+    display.blit(vsego_sobrano_monet,[0,y])
+
 
 def risovanie_game():
     ris_fps = model_nevazhno.clock.get_fps()
@@ -33,7 +37,7 @@ def risovanie_game():
     monet_sobrano = font.render("Всего собрано " + str(model.bank) + " монет", True, [255, 255, 255])
     vsego_bilo_monet = font.render("Всего появилось " + str(model.mirovoy_bank) + " монет", True, [255, 255, 255])
     fps = font.render("FPS:" + str(int(ris_fps)), True, [1, 255, 0])
-    lvl = font.render("Уровень: " + str(model.ris_lvl), True, [255, 255, 255])
+    lvl = font.render("Уровень: " + str(model_nevazhno.ris_lvl), True, [255, 255, 255])
 
     while True:
         x_start_pos = 1500 / (model.kol_tochki - 1) * number_tochek

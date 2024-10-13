@@ -1,4 +1,4 @@
-import pygame, model, random, time
+import pygame, model, random, time,model_nevazhno
 
 pygame.key.set_repeat(50)
 
@@ -32,7 +32,7 @@ def allsobitiya():
         if a.type == type_speed_ilona_maska:
             model.speed_x += 1
             model.speed_x += 2
-            model.ris_lvl += 1
+            model_nevazhno.ris_lvl += 1
 
         if a.type == pygame.MOUSEBUTTONDOWN and model.rect_monetki.collidepoint(a.pos[0], a.pos[1]):
             model.bank += 1
@@ -48,5 +48,5 @@ def allsobitiya():
         if a.type == type_ilona_maska:
             model.speed_ilon_mask()
 
-        if  a.type == pygame.KEYDOWN and a.key == pygame.K_ESCAPE:
+        if  a.type == pygame.KEYUP and a.key == pygame.K_ESCAPE:
             model.ekran = 2

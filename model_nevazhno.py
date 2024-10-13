@@ -1,12 +1,11 @@
 import random, time, pygame, settings,os,model
 
-import model
-
 clock = pygame.time.Clock()
 
-if os.path.exists("rekord_file.txt") == False:
+ris_lvl = 1
+def rekord():
     rekord_zapis = open("rekord_file.txt", "w+")
-    print("Уровень последней игры:" + int(model.ris_lvl), file=rekord_zapis, end="")
+    print("Уровень последней игры:" + str(ris_lvl), file=rekord_zapis,end="")
     rekord_zapis.close()
 
 read_rekord = open("rekord_file.txt", "r")
@@ -29,7 +28,7 @@ size_urovenb = save_urovenb.get_size()
 rect_display = pygame.Rect(0, 0, settings.width_display, settings.height_display)
 rect_start = pygame.Rect(0, 0, size_start[0], size_start[1])
 rect_continue = pygame.Rect(0, 0, size_continue[0], size_continue[1])
-rect_urovenb = pygame.Rect(0, 0+100, size_urovenb[0], size_urovenb[1])
+rect_urovenb = pygame.Rect(0, 0, size_urovenb[0], size_urovenb[1])
 
 
 rect_start.centerx = rect_display.centerx

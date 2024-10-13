@@ -1,6 +1,5 @@
 import random, time, pygame, model_nevazhno
 
-
 def fps():
     model_nevazhno.clock.tick()
 
@@ -23,10 +22,9 @@ def otbivka_verx():
     global speed_y
     speed_y = 10
 
-
 def vozvrat():
     rect_ilona_maska.x = -700
-
+    model_nevazhno.rekord()
 
 def speed_ilon_mask():
     global speed_x, speed_y
@@ -34,13 +32,11 @@ def speed_ilon_mask():
     rect_ilona_maska.y += speed_y
     otbivka()
 
-
 def timer_spawna_monetki():
     global mirovoy_bank
     mirovoy_bank += 1
     rect_monetki.x = random.randint(1100, 1450)
     rect_monetki.y = random.randint(0, 950)
-
 
 def grafik():
     global random_append
@@ -88,7 +84,6 @@ randomniy_y_spisok = []
 kol_tochki = random.randint(250, 250)
 s = range(kol_tochki)
 
-ris_lvl = 1
 speed_x = 10
 speed_y = 10
 
