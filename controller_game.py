@@ -19,6 +19,10 @@ def allsobitiya():
     global random_append
     s = pygame.event.get()
     for a in s:
+
+        if a.type == pygame.MOUSEBUTTONDOWN:
+            model_nevazhno.clicks += 1
+
         if a.type == type_spawn_monetki:
             model.timer_spawna_monetki()
 

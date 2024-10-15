@@ -1,8 +1,8 @@
+import math
 import random, time, pygame, model_nevazhno
 
 def fps():
     model_nevazhno.clock.tick()
-
 
 def otbivka():
     if rect_ilona_maska.bottom >= 1000:
@@ -12,11 +12,9 @@ def otbivka():
     if rect_ilona_maska.x >= 1500:
         vozvrat()
 
-
 def otbivka_niz():
     global speed_y
     speed_y = -10
-
 
 def otbivka_verx():
     global speed_y
@@ -27,7 +25,10 @@ def vozvrat():
     model_nevazhno.rekord()
 
 def speed_ilon_mask():
-    global speed_x, speed_y
+    global speed_x, speed_y,pixel
+    pixel_katet = speed_x*speed_x+speed_y*speed_y
+    pixel_koren = math.sqrt(pixel_katet)
+    pixel += int(pixel_koren)
     rect_ilona_maska.x += speed_x
     rect_ilona_maska.y += speed_y
     otbivka()
@@ -77,7 +78,7 @@ def grafik():
 
 
 ekran = 1
-
+pixel = 0
 mirovoy_bank = 1
 bank = 0
 randomniy_y_spisok = []

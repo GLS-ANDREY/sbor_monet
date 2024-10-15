@@ -3,7 +3,6 @@ import view_game
 
 spacex = pygame.image.load("spacex.jpg")
 spacex_transform = pygame.transform.scale(spacex, [1500, 1000])
-font = pygame.font.SysFont("comicsansms", 27, True)
 
 
 def risovanie_pauza():
@@ -16,15 +15,15 @@ def risovanie_pauza():
     pygame.draw.rect(view_nachalo.display, [11, 255, 0], model_nevazhno.rect_continue)
 
     #Тексты
-    #TODO:Сделать что бы все надписи рисовались дефом помощником
 
-    # tekushi_urovenb = font.render("Текущий уровень:" + str(model_nevazhno.ris_lvl), True, [255, 255, 255])
-    # vsego_monet = font.render("Всего выпало монет:" + str(model.mirovoy_bank),True,[255,255,255])
+    view_game.risovanie_nadpisi("Текущий уровень:" + str(model_nevazhno.ris_lvl),0)
+    view_game.risovanie_nadpisi("Всего выпало монет:" + str(model.mirovoy_bank),30)
     view_game.risovanie_nadpisi("Всего собрано монет:" + str(model.bank),60)
+    view_game.risovanie_nadpisi("Всего кликов мышью за игру:" + str(model_nevazhno.clicks),90)
+    view_game.risovanie_nadpisi("Всего Илон Маск пролетел пикселей:" + str(model.pixel),120)
 
     #Картинки
     view_nachalo.display.blit(model_nevazhno.continue_img,model_nevazhno.rect_continue)
-    # view_nachalo.display.blit(tekushi_urovenb,[0,0])
-    # view_nachalo.display.blit(vsego_monet,[0,30])
 
+    # view_nachalo.display.blit(tekushi_urovenb,[0,0])
     pygame.display.flip()

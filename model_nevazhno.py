@@ -2,6 +2,7 @@ import random, time, pygame, settings,os,model
 
 clock = pygame.time.Clock()
 
+clicks = 0
 ris_lvl = 1
 def rekord():
     rekord_zapis = open("rekord_file.txt", "w+")
