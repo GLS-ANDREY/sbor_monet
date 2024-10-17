@@ -15,7 +15,6 @@ def risovanie_pauza():
     pygame.draw.rect(view_nachalo.display, [11, 255, 0], model_nevazhno.rect_continue)
 
     #Тексты
-
     view_game.risovanie_nadpisi("Текущий уровень:" + str(model_nevazhno.ris_lvl),0)
     view_game.risovanie_nadpisi("Всего выпало монет:" + str(model.mirovoy_bank),30)
     view_game.risovanie_nadpisi("Всего собрано монет:" + str(model.bank),60)

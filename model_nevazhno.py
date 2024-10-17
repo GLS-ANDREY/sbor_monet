@@ -11,7 +11,6 @@ def rekord():
 
 read_rekord = open("rekord_file.txt", "r")
 read_rekord2 = read_rekord.read()
-
 pygame.init()
 font = pygame.font.Font("start_font.TTF", 100)
 font2 = pygame.font.SysFont("comicsansms", 27, True)

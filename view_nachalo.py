@@ -1,6 +1,5 @@
 import model, pygame
 import model_nevazhno
-pygame.init()
 
 display = pygame.display.set_mode([1500, 1000])
 
