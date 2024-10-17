@@ -1,3 +1,4 @@
+# coding=utf-8
 import model, pygame, view_game
 import model_nevazhno
 
@@ -9,16 +10,16 @@ spacex = pygame.image.load("spacex.jpg")
 
 spacex_transform = pygame.transform.scale(spacex, [1500, 1000])
 
-
+#TODO: РЎРґРµР»Р°С‚СЊ С‡С‚Рѕ Р±С‹ РїРёСЃР°Р»Рѕ СЃС‚Р°С‚РёСЃС‚РёРєСѓ РїСЂРѕС€Р»С‹Р№ РёРіСЂС‹(СЃРµР№С‡Р°СЃ РїРёС€РµС‚ С‚РµРєСѓС‰РµР№)
 def risovanie_stat_start():
     display.fill([0, 0, 0])
-    # Картинки
+    # РљР°СЂС‚РёРЅРєРё
     display.blit(spacex_transform, [0, 0])
-    # Текст
-    # view_game.risovanie_nadpisi("Айа йайа убили негра",0)
-    # view_game.risovanie_nadpisi("Текущий уровень:" + str(model_nevazhno.ris_lvl), 0)
-    # view_game.risovanie_nadpisi("Всего выпало монет:" + str(model.mirovoy_bank), 30)
-    # view_game.risovanie_nadpisi("Всего собрано монет:" + str(model.bank), 60)
-    # view_game.risovanie_nadpisi("Всего кликов мышью за игру:" + str(model_nevazhno.clicks), 90)
-    # view_game.risovanie_nadpisi("Всего Илон Маск пролетел пикселей:" + str(model.pixel), 120)
+    # РўРµРєСЃС‚
+    view_game.risovanie_nadpisi("РђР№Р° Р№Р°Р№Р° СѓР±РёР»Рё РЅРµРіСЂР°",0)
+    view_game.risovanie_nadpisi("РўРµРєСѓС‰РёР№ СѓСЂРѕРІРµРЅСЊ:" + str(model_nevazhno.ris_lvl), 0)
+    view_game.risovanie_nadpisi("Р’СЃРµРіРѕ РІС‹РїР°Р»Рѕ РјРѕРЅРµС‚:" + str(model.mirovoy_bank), 30)
+    view_game.risovanie_nadpisi("Р’СЃРµРіРѕ СЃРѕР±СЂР°РЅРѕ РјРѕРЅРµС‚:" + str(model.bank), 60)
+    view_game.risovanie_nadpisi("Р’СЃРµРіРѕ РєР»РёРєРѕРІ РјС‹С€СЊСЋ Р·Р° РёРіСЂСѓ:" + str(model_nevazhno.clicks), 90)
+    view_game.risovanie_nadpisi("Р’СЃРµРіРѕ РР»РѕРЅ РњР°СЃРє РїСЂРѕР»РµС‚РµР» РїРёРєСЃРµР»РµР№:" + str(model.pixel), 120)
     pygame.display.flip()
