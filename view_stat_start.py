@@ -10,16 +10,18 @@ spacex = pygame.image.load("spacex.jpg")
 
 spacex_transform = pygame.transform.scale(spacex, [1500, 1000])
 
-#TODO: Сделать что бы писало статистику прошлый игры(сейчас пишет текущей)
 def risovanie_stat_start():
     display.fill([0, 0, 0])
     # Картинки
     display.blit(spacex_transform, [0, 0])
     # Текст
-    view_game.risovanie_nadpisi("Айа йайа убили негра",0)
-    view_game.risovanie_nadpisi("Текущий уровень:" + str(model_nevazhno.ris_lvl), 0)
-    view_game.risovanie_nadpisi("Всего выпало монет:" + str(model.mirovoy_bank), 30)
-    view_game.risovanie_nadpisi("Всего собрано монет:" + str(model.bank), 60)
-    view_game.risovanie_nadpisi("Всего кликов мышью за игру:" + str(model_nevazhno.clicks), 90)
-    view_game.risovanie_nadpisi("Всего Илон Маск пролетел пикселей:" + str(model.pixel), 120)
+    view_game.risovanie_nadpisi("Текущий уровень:" + str(model_nevazhno.stats_read2[4]), 0)
+    view_game.risovanie_nadpisi("Всего выпало монет:" + str(model_nevazhno.stats_read2[3]), 30)
+    view_game.risovanie_nadpisi("Всего собрано монет:" + str(model_nevazhno.stats_read2[2]), 60)
+    view_game.risovanie_nadpisi("Всего кликов мышью за игру:" + str(model_nevazhno.stats_read2[1]), 90)
+    view_game.risovanie_nadpisi("Всего Илон Маск пролетел пикселей:" + str(model_nevazhno.stats_read2[0]), 120)
+    #Ректы
+    pygame.draw.rect(display, [0, 255, 0], model_nevazhno.rect_back)
+    #Картинки
+    display.blit(model_nevazhno.back,model_nevazhno.rect_back)
     pygame.display.flip()

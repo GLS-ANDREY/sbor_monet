@@ -1,4 +1,5 @@
-import time, view_game, controller_game, controller_nachalo, view_nachalo, view_pauza, controller_pauza, model,model_nevazhno, controller_stat_start,aboba
+import time, view_game, controller_game, controller_nachalo, view_nachalo, view_pauza, controller_pauza,\
+    model,model_nevazhno, controller_stat_start,view_stat_start
 
 while True:
     if model.ekran == 1:
@@ -12,5 +13,5 @@ while True:
         view_pauza.risovanie_pauza()
     if model.ekran == 3:
         controller_stat_start.allsobitiya_stat_start()
-        aboba.risovanie_stat_start()
+        view_stat_start.risovanie_stat_start()
     model.fps()

@@ -16,7 +16,6 @@ zona_transform = pygame.transform.scale(zona, [400, 1000])
 ilon_mask_transform = pygame.transform.scale(ilon_mask, [450, 300])
 
 def risovanie_nadpisi(nadpis,y,color=[255,255,255]):
-    print(nadpis)
     stat_pauza = font2.render(nadpis,True,color)
     display.blit(stat_pauza,[0,y])
 
