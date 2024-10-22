@@ -6,6 +6,7 @@ def allsobitiya_nachalo():
     for a in s:
         if a.type == pygame.MOUSEBUTTONDOWN and model_nevazhno.rect_start.collidepoint(a.pos[0], a.pos[1]):
             model.ekran = 0
+            model.start_game()
         if a.type == pygame.MOUSEBUTTONDOWN and model_nevazhno.rect_urovenb.collidepoint(a.pos[0], a.pos[1]):
             model_nevazhno.stats_load()
             model.ekran = 3

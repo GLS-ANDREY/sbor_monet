@@ -2,8 +2,6 @@ import pygame, model, random, model_nevazhno, settings
 
 display = pygame.display.set_mode([settings.width_display, settings.height_display])
 
-rect = model.rect_ilona_maska
-
 pygame.init()
 font = pygame.font.SysFont("arial", 27, True)
 font2 = pygame.font.SysFont("comicsansms", 27, True)
@@ -27,7 +25,7 @@ def risovanie_game():
 
     # Картинки
     display.blit(zona_transform, [1100, 0])
-    display.blit(ilon_mask_transform, rect)
+    display.blit(ilon_mask_transform, model.rect_ilona_maska)
 
     # Ректы
     # pygame.draw.rect(display,[255,255,255],model.rect_monetki,4)

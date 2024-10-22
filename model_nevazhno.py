@@ -4,6 +4,7 @@ clock = pygame.time.Clock()
 
 clicks = 0
 ris_lvl = 1
+bank_stat = 0
 
 
 def rekord():
@@ -14,7 +15,7 @@ def rekord():
 
 def stats_dump():
     stats_zapis = open("stats_file.txt", "w+")
-    json.dump([ris_lvl, model.mirovoy_bank, model.bank, clicks, model.pixel], stats_zapis)
+    json.dump([ris_lvl, model.mirovoy_bank, bank_stat, clicks, model.pixel], stats_zapis)
     stats_zapis.close()
 
 

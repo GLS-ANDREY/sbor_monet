@@ -30,6 +30,7 @@ def allsobitiya():
 
         if a.type == pygame.MOUSEBUTTONDOWN and model.rect_monetki.collidepoint(a.pos[0], a.pos[1]):
             model.bank += 1
+            model_nevazhno.bank_stat += 1
             pygame.time.set_timer(model.type_spawn_monetki, 1500)
             model.timer_spawna_monetki()
 

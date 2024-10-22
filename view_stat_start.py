@@ -15,11 +15,11 @@ def risovanie_stat_start():
     # Картинки
     display.blit(spacex_transform, [0, 0])
     # Текст
-    view_game.risovanie_nadpisi("Текущий уровень:" + str(model_nevazhno.stats_read2[4]), 0)
-    view_game.risovanie_nadpisi("Всего выпало монет:" + str(model_nevazhno.stats_read2[3]), 30)
-    view_game.risovanie_nadpisi("Всего собрано монет:" + str(model_nevazhno.stats_read2[2]), 60)
-    view_game.risovanie_nadpisi("Всего кликов мышью за игру:" + str(model_nevazhno.stats_read2[1]), 90)
-    view_game.risovanie_nadpisi("Всего Илон Маск пролетел пикселей:" + str(model_nevazhno.stats_read2[0]), 120)
+    view_game.risovanie_nadpisi("Уровень прошлой игры:" + str(model_nevazhno.stats_read2[0]), 0)
+    view_game.risovanie_nadpisi("Всего выпало монет в прошлой игре:" + str(model_nevazhno.stats_read2[1]), 30)
+    view_game.risovanie_nadpisi("Всего собрано монет в прошлой игре:" + str(model_nevazhno.stats_read2[2]), 60)
+    view_game.risovanie_nadpisi("Всего кликов мышью за прошлую игру:" + str(model_nevazhno.stats_read2[3]), 90)
+    view_game.risovanie_nadpisi("Всего Илон Маск пролетел пикселей за прошлую игру:" + str(model_nevazhno.stats_read2[4]), 120)
     #Ректы
     pygame.draw.rect(display, [0, 255, 0], model_nevazhno.rect_back)
     #Картинки

@@ -1,5 +1,5 @@
-import time, view_game, controller_game, controller_nachalo, view_nachalo, view_pauza, controller_pauza,\
-    model,model_nevazhno, controller_stat_start,view_stat_start
+import time,model, view_game, controller_game, controller_nachalo, view_nachalo, view_pauza, controller_pauza, \
+    model_nevazhno, controller_stat_start,view_stat_start
 
 while True:
     if model.ekran == 1:
